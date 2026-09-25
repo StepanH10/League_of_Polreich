@@ -1,0 +1,38 @@
+@use '../abstracts' as *;
+
+.footer {
+  padding-block: $space-xl;
+  font-size: 0.9rem;
+  color: var(--color-text-muted);
+  background-color: var(--color-surface);
+  border-top: 3px solid var(--color-accent);
+
+  &__links {
+    display: flex;
+    flex-direction: column;
+    gap: $space-sm;
+    margin-bottom: $space-lg;
+
+    @include respond(sm) {
+      flex-direction: row;
+      flex-wrap: wrap;
+      gap: $space-sm $space-lg;
+    }
+  }
+
+  &__link {
+    color: var(--color-text);
+
+    &:hover {
+      color: var(--color-accent);
+    }
+  }
+
+  &__disclaimer {
+    margin-bottom: $space-md;
+  }
+
+  &__copy {
+    color: var(--color-steel);
+  }
+}

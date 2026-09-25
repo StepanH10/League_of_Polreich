@@ -1,0 +1,72 @@
+@use '../abstracts' as *;
+
+.quiz {
+  display: grid;
+  gap: $space-lg;
+
+  &__question {
+    padding: $space-lg;
+    background-color: var(--color-surface);
+    border: 2px solid var(--color-border);
+    border-radius: $radius-md;
+    transition: border-color $transition;
+
+    legend {
+      float: left; // legend uvnitř rámečku, ne na okraji
+      width: 100%;
+      margin-bottom: $space-md;
+      font-weight: 600;
+    }
+
+    &.is-correct {
+      border-color: var(--color-success);
+    }
+
+    &.is-wrong {
+      border-color: var(--color-error);
+    }
+  }
+
+  &__option {
+    display: flex;
+    align-items: center;
+    gap: $space-sm;
+    padding: $space-sm $space-md;
+    border-radius: $radius-sm;
+    cursor: pointer;
+    transition: background-color $transition;
+
+    &:hover {
+      background-color: var(--color-surface-2);
+    }
+
+    input {
+      flex-shrink: 0;
+      width: 1.15rem;
+      height: 1.15rem;
+      accent-color: var(--color-accent);
+    }
+
+    &.is-correct {
+      color: var(--color-success);
+    }
+
+    &.is-wrong {
+      color: var(--color-error);
+    }
+  }
+
+  &__result {
+    margin-top: $space-lg;
+    font-size: 1.15rem;
+    font-weight: 700;
+
+    &.is-success {
+      color: var(--color-success);
+    }
+  }
+
+  .btn {
+    justify-self: start;
+  }
+}

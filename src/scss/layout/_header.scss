@@ -1,0 +1,154 @@
+@use '../abstracts' as *;
+
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: $space-sm $space-md;
+  min-height: $header-height;
+  // Obsah zarovnaný na šířku kontejneru, pozadí přes celou šířku
+  padding: $space-sm max($container-gutter, calc((100% - #{$container-max}) / 2));
+  background-color: rgb(18 18 18 / 92%);
+  border-bottom: 1px solid var(--color-border);
+  backdrop-filter: blur(8px);
+
+  &__logo {
+    display: flex;
+    align-items: center;
+    gap: $space-sm;
+    font-family: $font-heading;
+    font-weight: 700;
+    color: var(--color-text);
+    text-decoration: none;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+
+    &:hover {
+      color: var(--color-accent);
+    }
+
+    img {
+      width: 40px;
+    }
+
+    @include respond(sm) {
+      font-size: 1.25rem;
+    }
+  }
+}
+
+// Hamburger
+.nav-toggle {
+  @include flex-center;
+  gap: $space-sm;
+  padding: $space-sm;
+  background: transparent;
+  border: 2px solid var(--color-border);
+  border-radius: $radius-sm;
+  transition:
+    border-color $transition,
+    color $transition;
+
+  &:hover {
+    color: var(--color-accent);
+    border-color: var(--color-accent);
+  }
+
+  &__icon,
+  &__icon::before,
+  &__icon::after {
+    display: block;
+    width: 22px;
+    height: 2px;
+    background-color: currentcolor;
+    border-radius: 2px;
+    transition: transform $transition, background-color $transition;
+  }
+
+  &__icon {
+    position: relative;
+
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      left: 0;
+    }
+
+    &::before {
+      top: -7px;
+    }
+
+    &::after {
+      top: 7px;
+    }
+  }
+
+  // Otevřené menu → ikona se změní na křížek
+  &[aria-expanded='true'] &__icon {
+    background-color: transparent;
+
+    &::before {
+      transform: translateY(7px) rotate(45deg);
+    }
+
+    &::after {
+      transform: translateY(-7px) rotate(-45deg);
+    }
+  }
+
+  @include respond(md) {
+    display: none;
+  }
+}
+
+.nav {
+  flex-basis: 100%;
+
+  &__list {
+    display: none;
+    flex-direction: column;
+    gap: $space-xs;
+    padding-bottom: $space-sm;
+
+    &.is-open {
+      display: flex;
+    }
+  }
+
+  &__link {
+    display: block;
+    padding: $space-sm $space-md;
+    font-weight: 600;
+    color: var(--color-text);
+    text-decoration: none;
+    border-radius: $radius-sm;
+    transition:
+      color $transition,
+      background-color $transition;
+
+    &:hover,
+    &.is-active {
+      color: var(--color-accent);
+      background-color: var(--color-surface-2);
+    }
+  }
+
+  @include respond(md) {
+    flex-basis: auto;
+
+    &__list {
+      display: flex;
+      flex-direction: row;
+      padding-bottom: 0;
+    }
+
+    &__link {
+      padding: $space-sm 0.75rem;
+    }
+  }
+}

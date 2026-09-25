@@ -1,0 +1,10 @@
+@use '../abstracts' as *;
+
+// CSS custom properties vygenerované z mapy $colors → --color-bg, --color-accent, …
+:root {
+  @each $name, $value in $colors {
+    --color-#{$name}: #{$value};
+  }
+
+  color-scheme: dark;
+}

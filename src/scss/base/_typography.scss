@@ -1,0 +1,56 @@
+@use '../abstracts' as *;
+
+// Fonty Oswald a Inter se načítají přes <link> v index.html
+
+body {
+  font-family: $font-body;
+  font-size: clamp(1rem, 0.95rem + 0.25vw, 1.125rem);
+  line-height: 1.6;
+}
+
+h1,
+h2,
+h3 {
+  font-family: $font-heading;
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  overflow-wrap: break-word;
+}
+
+h1 {
+  font-size: clamp(2.5rem, 1.6rem + 4.5vw, 5rem);
+  color: var(--color-accent);
+}
+
+h2 {
+  margin-bottom: $space-lg;
+  font-size: clamp(1.75rem, 1.35rem + 2vw, 3rem);
+}
+
+h3 {
+  margin-bottom: $space-sm;
+  font-size: clamp(1.25rem, 1.1rem + 0.75vw, 1.6rem);
+  font-weight: 500;
+}
+
+p {
+  max-width: 70ch;
+}
+
+a {
+  color: var(--color-accent);
+  text-underline-offset: 0.2em;
+  transition: color $transition;
+
+  &:hover {
+    color: var(--color-accent-hover);
+  }
+}
+
+blockquote {
+  font-family: $font-heading;
+  font-size: clamp(1.4rem, 1.1rem + 1.5vw, 2rem);
+  line-height: 1.3;
+}

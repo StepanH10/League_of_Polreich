@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="cs">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>League of Pohlreich – kuchařská strategie inspirovaná Ano, šéfe!</title>
+    <meta name="description" content="Fanouškovská kuchařská strategie: zachraň zkrachovalé restaurace, přežij kontrolu kuchyně a získej přízeň šéfa. Registruj se do bety!">
+    <link rel="icon" type="image/svg+xml" href="/img/logo.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Oswald:wght@500;700&display=swap">
+  </head>
+  <body>
+    <header class="header">
+      <a class="header__logo" href="#hero">
+        <img src="/img/logo.svg" alt="League of Pohlreich – logo s kuchařskou čepicí" width="48" height="48">
+        <span>League of Pohlreich</span>
+      </a>
+
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="hlavni-menu">
+        <span class="nav-toggle__icon" aria-hidden="true"></span>
+        <span class="nav-toggle__label">Menu</span>
+      </button>
+
+      <nav class="nav" aria-label="Hlavní navigace">
+        <ul class="nav__list" id="hlavni-menu">
+          <li><a class="nav__link" href="#o-hre">O hře</a></li>
+          <li><a class="nav__link" href="#trailer">Trailer</a></li>
+          <li><a class="nav__link" href="#rezimy">Herní režimy</a></li>
+          <li><a class="nav__link" href="#postavy">Postavy</a></li>
+          <li><a class="nav__link" href="#kviz">Kvíz</a></li>
+          <li><a class="nav__link" href="#faq">Časté dotazy</a></li>
+          <li><a class="nav__link" href="#registrace">Registrace</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <!-- HERO -->
+      <section id="hero" class="hero container">
+        <div class="hero__text">
+          <h1>League of Pohlreich</h1>
+          <p class="hero__perex">
+            Kuchařská strategie, ve které zachraňuješ zkrachovalé restaurace. Vyhoď mražené polotovary,
+            vydrhni lednici a uvař poctivou svíčkovou dřív, než šéf řekne: „Tohle bych nedal ani psovi!“
+          </p>
+          <a class="btn btn--primary" href="#registrace">Zaregistruj se do bety</a>
+        </div>
+        <img class="hero__img" src="/img/hero.svg" alt="Kouřící pánev s připáleným řízkem nad plápolajícími plameny" width="480" height="360">
+      </section>
+
+      <!-- TRAILER -->
+      <section id="trailer" class="section container">
+        <h2>Trailer</h2>
+        <p class="video__perex">Než se pustíš do vaření, naladí tě ochutnávka hlášek přímo z kuchyně.</p>
+        <div class="video" data-video-id="L_Y0yRIj85A" data-video-title="Nejlepší hlášky Zdeňka Pohlreicha">
+          <a class="video__fallback" href="https://www.youtube.com/watch?v=L_Y0yRIj85A">Přehrát video Nejlepší hlášky Zdeňka Pohlreicha na YouTube</a>
+        </div>
+      </section>
+
+      <!-- O HŘE -->
+      <section id="o-hre" class="section container">
+        <h2>O hře</h2>
+        <div class="features">
+          <article class="feature">
+            <h3>Zachraň restauraci</h3>
+            <p>
+              Přijedeš do podniku, kde mají na jídelním lístku 84 jídel a v kuchyni jednu pánev.
+              Tvým úkolem je škrtat, uklízet a vrátit hostům chuť k jídlu. Doslova.
+            </p>
+          </article>
+          <article class="feature">
+            <h3>Přežij kontrolu kuchyně</h3>
+            <p>
+              Otevři lednici a čel svému osudu. Vývar z minulého týdne, knedlíky neznámého stáří
+              a omáčka, která si už založila vlastní ekosystém. Každá chyba stojí body hygieny.
+            </p>
+          </article>
+          <article class="feature">
+            <h3>Vyhraj přízeň šéfa</h3>
+            <p>
+              Šéf je přísný, ale spravedlivý. Když se snažíš, pochválí tě. Když podáš knedlík z mikrovlnky,
+              uslyšíš hlášku, kterou si budeš pamatovat do konce kariéry.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <!-- HERNÍ REŽIMY -->
+      <section id="rezimy" class="section container">
+        <h2>Herní režimy</h2>
+        <div class="tabs">
+          <div class="tabs__list" role="tablist" aria-label="Herní režimy">
+            <button class="tabs__tab" type="button" role="tab" id="tab-kampan" data-tab="kampan" aria-selected="true" aria-controls="panel-kampan">Kampaň</button>
+            <button class="tabs__tab" type="button" role="tab" id="tab-kontrola" data-tab="kontrola" aria-selected="false" aria-controls="panel-kontrola" tabindex="-1">Noční kontrola</button>
+            <button class="tabs__tab" type="button" role="tab" id="tab-multiplayer" data-tab="multiplayer" aria-selected="false" aria-controls="panel-multiplayer" tabindex="-1">Multiplayer</button>
+          </div>
+
+          <div class="tabs__panel" role="tabpanel" id="panel-kampan" aria-labelledby="tab-kampan">
+            <h3>Kampaň</h3>
+            <p>
+              Dvacet restaurací od Aše po Ostravu. Každá má svůj problém: pizzerie s knedlíky, bistro
+              s tatarákem z konzervy nebo hospoda, kde vaří majitelova tchyně „podle citu“.
+              Za každou záchranu odemkneš nové recepty a lepší nože.
+            </p>
+          </div>
+
+          <div class="tabs__panel" role="tabpanel" id="panel-kontrola" aria-labelledby="tab-kontrola" hidden>
+            <h3>Noční kontrola</h3>
+            <p>
+              Je půlnoc, světla zhasnutá a ty máš jen baterku. Najdi v kuchyni všechny prohřešky dřív,
+              než vyprší čas. Pozor na mrazák – co v něm najdeš, už nikdy neodvidíš.
+            </p>
+          </div>
+
+          <div class="tabs__panel" role="tabpanel" id="panel-multiplayer" aria-labelledby="tab-multiplayer" hidden>
+            <h3>Multiplayer</h3>
+            <p>
+              Až čtyři hráči v jedné kuchyni. Jeden krájí, druhý smaží, třetí myje nádobí a čtvrtý
+              se hádá s majitelem. Vyhrává tým, jehož talíře se vrátí z jídelny prázdné.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- POSTAVY -->
+      <section id="postavy" class="section container">
+        <h2>Postavy</h2>
+        <div class="characters">
+          <article class="card">
+            <img class="card__img" src="/img/Z_POLREICH_2014.JPG" alt="Zdeněk Pohlreich v bílém kuchařském rondonu s mikroportem, v ruce drží chilli papričku" width="330" height="320">
+            <h3 class="card__title">Šéf</h3>
+            <p>Legenda české gastronomie. Pozná rozmražený řízek na sto metrů a nikdy neodpouští instantní bramborovou kaši.</p>
+            <ul class="card__stats">
+              <li>Kuchařské umění: 10/10</li>
+              <li>Trpělivost: 3/10</li>
+              <li>Upřímnost: 11/10</li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <img class="card__img" src="/img/postava-majitel.svg" alt="Nervózní majitel restaurace v saku s kravatou a kapkou potu na čele" width="160" height="160">
+            <h3 class="card__title">Majitel Ladislav</h3>
+            <p>Restauraci koupil, protože „rád jí“. Dluží dodavatelům i tchyni a je přesvědčený, že problém je v ubrusech.</p>
+            <ul class="card__stats">
+              <li>Optimismus: 9/10</li>
+              <li>Znalost účetnictví: 1/10</li>
+              <li>Ochota se změnit: 4/10</li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <img class="card__img" src="/img/postava-kuchar.svg" alt="Kuchař v kšiltovce a ušpiněné zástěře s pytlíkem instantní omáčky" width="160" height="160">
+            <h3 class="card__title">Kuchař Bohouš</h3>
+            <p>Dvacet let praxe, z toho devatenáct s pytlíkovou omáčkou. Tvrdí, že „to lidi chtěj“. Skrytý talent čeká na probuzení.</p>
+            <ul class="card__stats">
+              <li>Rychlost: 8/10</li>
+              <li>Hygiena: 2/10</li>
+              <li>Skrytý potenciál: 7/10</li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <img class="card__img" src="/img/postava-servirka.svg" alt="Usměvavá servírka s drdolem nesoucí podnos s jídlem" width="160" height="160">
+            <h3 class="card__title">Servírka Jarmila</h3>
+            <p>Jediná, kdo v podniku ví, co se děje. Zná každého štamgasta jménem a každou reklamaci nazpaměť.</p>
+            <ul class="card__stats">
+              <li>Komunikace: 9/10</li>
+              <li>Přehled: 10/10</li>
+              <li>Nervy ze železa: 8/10</li>
+            </ul>
+          </article>
+        </div>
+
+        <aside class="quote" aria-labelledby="hlaska-nadpis">
+          <h3 class="quote__title" id="hlaska-nadpis">Hláška dne</h3>
+          <blockquote class="quote__text" id="hlaska">
+            <p>„To musíte dát do lednice, jinak se vám z toho tady někdo posere do vejšky.“</p>
+          </blockquote>
+          <button class="btn btn--secondary" type="button" id="dalsi-hlaska">Další hláška</button>
+        </aside>
+      </section>
+
+      <!-- KVÍZ -->
+      <section id="kviz" class="section container">
+        <h2>Kvíz: Přežil bys v kuchyni?</h2>
+        <form id="kviz-form" class="quiz">
+          <fieldset class="quiz__question">
+            <legend>1. Kolik jídel by měl mít jídelní lístek malé restaurace?</legend>
+            <label class="quiz__option"><input type="radio" name="otazka1" value="a"> 84, ať si každý vybere</label>
+            <label class="quiz__option"><input type="radio" name="otazka1" value="b"> Málo, ale poctivých a čerstvých</label>
+            <label class="quiz__option"><input type="radio" name="otazka1" value="c"> Jen to, co zbylo v mrazáku</label>
+          </fieldset>
+
+          <fieldset class="quiz__question">
+            <legend>2. Jakou teplotu by měla mít lednice na suroviny?</legend>
+            <label class="quiz__option"><input type="radio" name="otazka2" value="a"> 2–5 °C</label>
+            <label class="quiz__option"><input type="radio" name="otazka2" value="b"> 12 °C, šetříme elektřinu</label>
+            <label class="quiz__option"><input type="radio" name="otazka2" value="c"> Hlavně ať bzučí</label>
+          </fieldset>
+
+          <fieldset class="quiz__question">
+            <legend>3. Hotová omáčka z pytlíku je…</legend>
+            <label class="quiz__option"><input type="radio" name="otazka3" value="a"> Tajemství podniku</label>
+            <label class="quiz__option"><input type="radio" name="otazka3" value="b"> Rychlá cesta ke spokojeným hostům</label>
+            <label class="quiz__option"><input type="radio" name="otazka3" value="c"> Důvod, proč šéf zrudne</label>
+          </fieldset>
+
+          <fieldset class="quiz__question">
+            <legend>4. Co uděláš s vývarem, který stojí na sporáku od minulého týdne?</legend>
+            <label class="quiz__option"><input type="radio" name="otazka4" value="a"> Přihřeju a podám jako „zralý“</label>
+            <label class="quiz__option"><input type="radio" name="otazka4" value="b"> Vyliju a uvařím nový</label>
+            <label class="quiz__option"><input type="radio" name="otazka4" value="c"> Přidám víc soli, to spraví</label>
+          </fieldset>
+
+          <button class="btn btn--primary" type="submit">Vyhodnotit</button>
+        </form>
+        <p class="quiz__result" id="kviz-vysledek" aria-live="polite"></p>
+      </section>
+
+      <!-- FAQ -->
+      <section id="faq" class="section container">
+        <h2>Časté dotazy</h2>
+        <div class="faq">
+          <div class="faq__item">
+            <h3>
+              <button class="faq__question" type="button" aria-expanded="false" aria-controls="faq-odpoved-1">Kdy hra vyjde?</button>
+            </h3>
+            <div class="faq__answer" id="faq-odpoved-1" hidden>
+              <p>Až bude hotová. Nevydáme nic, co bychom sami nesnědli.</p>
+            </div>
+          </div>
+
+          <div class="faq__item">
+            <h3>
+              <button class="faq__question" type="button" aria-expanded="false" aria-controls="faq-odpoved-2">Na jakých platformách si hru zahraju?</button>
+            </h3>
+            <div class="faq__answer" id="faq-odpoved-2" hidden>
+              <p>Na PC, PlayStationu, Xboxu i Switchi. Na mikrovlnce ne, té se v naší hře vyhýbáme.</p>
+            </div>
+          </div>
+
+          <div class="faq__item">
+            <h3>
+              <button class="faq__question" type="button" aria-expanded="false" aria-controls="faq-odpoved-3">Je hra vhodná pro začátečníky?</button>
+            </h3>
+            <div class="faq__answer" id="faq-odpoved-3" hidden>
+              <p>Ano. Obtížnost „Pomocný kuchař“ tě provede základy a šéf tam křičí jen trochu.</p>
+            </div>
+          </div>
+
+          <div class="faq__item">
+            <h3>
+              <button class="faq__question" type="button" aria-expanded="false" aria-controls="faq-odpoved-4">Budou ve hře mikrotransakce?</button>
+            </h3>
+            <div class="faq__answer" id="faq-odpoved-4" hidden>
+              <p>Ne. Jediné, co si můžeš koupit, jsou čerstvé suroviny na trhu – a ty se platí herními penězi.</p>
+            </div>
+          </div>
+
+          <div class="faq__item">
+            <h3>
+              <button class="faq__question" type="button" aria-expanded="false" aria-controls="faq-odpoved-5">Můžu hrát za šéfa?</button>
+            </h3>
+            <div class="faq__answer" id="faq-odpoved-5" hidden>
+              <p>Tuhle čest si musíš vysloužit. Šéf se odemkne po záchraně všech dvaceti restaurací v kampani.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- REGISTRACE -->
+      <section id="registrace" class="section container">
+        <h2>Registrace do bety</h2>
+        <form id="registrace-form" class="form" novalidate>
+          <div class="form__field">
+            <label class="form__label" for="prezdivka">Přezdívka</label>
+            <input class="form__input" type="text" id="prezdivka" name="prezdivka" autocomplete="nickname" aria-describedby="prezdivka-chyba" required minlength="3">
+            <p class="form__error" id="prezdivka-chyba"></p>
+          </div>
+
+          <div class="form__field">
+            <label class="form__label" for="email">E-mail</label>
+            <input class="form__input" type="email" id="email" name="email" autocomplete="email" aria-describedby="email-chyba" required>
+            <p class="form__error" id="email-chyba"></p>
+          </div>
+
+          <div class="form__field">
+            <label class="form__label" for="platforma">Platforma</label>
+            <select class="form__input form__select" id="platforma" name="platforma" aria-describedby="platforma-chyba" required>
+              <option value="">Vyber platformu</option>
+              <option value="pc">PC</option>
+              <option value="playstation">PlayStation</option>
+              <option value="xbox">Xbox</option>
+              <option value="switch">Switch</option>
+            </select>
+            <p class="form__error" id="platforma-chyba"></p>
+          </div>
+
+          <fieldset class="form__field form__field--group" aria-describedby="obtiznost-chyba">
+            <legend class="form__label">Obtížnost</legend>
+            <label class="form__option"><input type="radio" name="obtiznost" value="pomocny-kuchar" required> Pomocný kuchař</label>
+            <label class="form__option"><input type="radio" name="obtiznost" value="sefkuchar"> Šéfkuchař</label>
+            <label class="form__option"><input type="radio" name="obtiznost" value="ano-sefe"> Ano, šéfe! (nejtěžší)</label>
+            <p class="form__error" id="obtiznost-chyba"></p>
+          </fieldset>
+
+          <div class="form__field form__field--checkbox">
+            <input type="checkbox" id="souhlas" name="souhlas" aria-describedby="souhlas-chyba" required>
+            <label class="form__label" for="souhlas">Souhlasím se zpracováním údajů pro účely beta testu</label>
+            <p class="form__error" id="souhlas-chyba"></p>
+          </div>
+
+          <button class="btn btn--primary" type="submit">Odeslat</button>
+        </form>
+        <p class="form__message" id="form-zprava" aria-live="polite"></p>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <nav aria-label="Odkazy v patičce">
+          <ul class="footer__links">
+            <li><a class="footer__link" href="#hero">Zpět na začátek stránky</a></li>
+            <li><a class="footer__link" href="#rezimy">Přehled herních režimů</a></li>
+            <li><a class="footer__link" href="#faq">Odpovědi na časté dotazy</a></li>
+            <li><a class="footer__link" href="#registrace">Přihláška do beta testu</a></li>
+          </ul>
+        </nav>
+        <p class="footer__disclaimer">
+          League of Pohlreich je fiktivní hra a fanouškovský školní projekt. Nemá žádný vztah k pořadu
+          „Ano, šéfe!“, jeho tvůrcům ani ke Zdeňku Pohlreichovi. Postavy jsou smyšlené, hlášky jsou citace z pořadu použité pro parodii.
+        </p>
+        <p class="footer__copy">&copy; <span id="rok">2026</span> League of Pohlreich – školní projekt</p>
+      </div>
+    </footer>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

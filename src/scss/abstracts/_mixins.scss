@@ -1,0 +1,40 @@
+@use 'sass:map';
+@use 'variables' as *;
+
+// Media query mobile-first: @include respond(md) nebo @include respond(720px)
+@mixin respond($bp) {
+  $width: $bp;
+
+  @if map.has-key($breakpoints, $bp) {
+    $width: map.get($breakpoints, $bp);
+  }
+
+  @media (min-width: $width) {
+    @content;
+  }
+}
+
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+// Zvednutí karty při najetí myší
+@mixin card-hover {
+  transition:
+    transform $transition,
+    box-shadow $transition,
+    border-color $transition;
+
+  &:hover {
+    transform: translateY(-4px);
+    border-color: var(--color-accent);
+    box-shadow: 0 12px 28px rgb(0 0 0 / 45%);
+  }
+}
+
+@mixin focus-ring {
+  outline: 3px solid var(--color-accent);
+  outline-offset: 3px;
+}

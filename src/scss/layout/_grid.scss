@@ -1,0 +1,52 @@
+@use '../abstracts' as *;
+
+.container {
+  width: min(100% - 2 * #{$container-gutter}, #{$container-max});
+  margin-inline: auto;
+}
+
+.section {
+  padding-block: $space-xl;
+  border-top: 1px solid var(--color-border);
+
+  @include respond(md) {
+    padding-block: $space-2xl;
+  }
+}
+
+.hero {
+  display: grid;
+  gap: $space-xl;
+  align-items: center;
+  padding-block: $space-xl;
+
+  &__perex {
+    margin-block: $space-lg $space-xl;
+    font-size: clamp(1.05rem, 0.95rem + 0.5vw, 1.3rem);
+    color: var(--color-text-muted);
+  }
+
+  &__img {
+    justify-self: center;
+    width: 100%;
+    max-width: 480px;
+  }
+
+  @include respond(md) {
+    grid-template-columns: 1.1fr 1fr;
+    min-height: calc(100vh - #{$header-height});
+    padding-block: $space-2xl;
+  }
+}
+
+// Karty přes Grid – min() zabrání přetečení na úzkém displeji
+.features,
+.characters {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr));
+  gap: $space-lg;
+}
+
+.characters {
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 230px), 1fr));
+}

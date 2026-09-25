@@ -1,0 +1,108 @@
+@use '../abstracts' as *;
+
+.form {
+  display: grid;
+  gap: $space-lg;
+  max-width: 640px;
+  padding: $space-lg;
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: $radius-lg;
+
+  &__field {
+    display: flex;
+    flex-direction: column;
+    gap: $space-xs;
+
+    &--group {
+      gap: $space-sm;
+    }
+
+    &--checkbox {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      align-items: start;
+      gap: $space-xs $space-sm;
+
+      input {
+        width: 1.25rem;
+        height: 1.25rem;
+        margin-top: 0.2rem;
+        accent-color: var(--color-accent);
+      }
+    }
+
+    // Chybový stav – nastavuje JS
+    &.has-error {
+      --field-border: var(--color-error);
+    }
+  }
+
+  &__label {
+    font-weight: 600;
+  }
+
+  &__input {
+    width: 100%;
+    min-height: 3rem;
+    padding: 0.7rem $space-md;
+    background-color: var(--color-bg);
+    border: 2px solid var(--field-border, var(--color-border));
+    border-radius: $radius-sm;
+    transition: border-color $transition;
+
+    &:hover {
+      border-color: var(--color-steel);
+    }
+
+    &:focus-visible {
+      @include focus-ring;
+      border-color: var(--color-accent);
+    }
+  }
+
+  &__select {
+    cursor: pointer;
+  }
+
+  &__option {
+    display: flex;
+    align-items: center;
+    gap: $space-sm;
+    cursor: pointer;
+
+    input {
+      width: 1.15rem;
+      height: 1.15rem;
+      accent-color: var(--color-accent);
+    }
+  }
+
+  &__error {
+    grid-column: 1 / -1;
+    min-height: 1.25em;
+    font-size: 0.875rem;
+    color: var(--color-error);
+  }
+
+  &__message {
+    margin-top: $space-lg;
+    font-weight: 700;
+
+    &.is-success {
+      color: var(--color-success);
+    }
+
+    &.has-error {
+      color: var(--color-error);
+    }
+  }
+
+  .btn {
+    justify-self: start;
+  }
+
+  @include respond(sm) {
+    padding: $space-xl;
+  }
+}

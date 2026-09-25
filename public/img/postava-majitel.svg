@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" width="160" height="160">
+  <!-- Majitel: sako, kravata, nervózní pot -->
+  <circle cx="80" cy="80" r="78" fill="#dbeafe"/>
+  <path d="M30 160c0-35 22-52 50-52s50 17 50 52z" fill="#3d405b" stroke="#1f1f1f" stroke-width="3"/>
+  <path d="M74 110h12l-2 30-4 6-4-6z" fill="#d62828" stroke="#1f1f1f" stroke-width="2"/>
+  <circle cx="80" cy="76" r="32" fill="#f1c7a3" stroke="#1f1f1f" stroke-width="3"/>
+  <path d="M50 64c0-18 14-28 30-28s30 10 30 28c-6-8-16-10-30-10s-24 2-30 10z" fill="#6b4f3a"/>
+  <circle cx="69" cy="76" r="3.5" fill="#1f1f1f"/>
+  <circle cx="91" cy="76" r="3.5" fill="#1f1f1f"/>
+  <path d="M70 94q10 6 20 0" fill="none" stroke="#1f1f1f" stroke-width="3" stroke-linecap="round" transform="rotate(180 80 95)"/>
+  <path d="M108 62c4 6 4 10 0 12-4-2-4-6 0-12z" fill="#7ec8e3" stroke="#1f1f1f" stroke-width="1.5"/>
+</svg>

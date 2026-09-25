@@ -1,0 +1,64 @@
+@use '../abstracts' as *;
+
+.tabs {
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: $space-sm;
+    margin-bottom: $space-lg;
+  }
+
+  &__tab {
+    flex: 1 1 auto;
+    padding: 0.75rem 1.25rem;
+    font-weight: 600;
+    color: var(--color-text-muted);
+    background-color: var(--color-surface);
+    border: 2px solid var(--color-border);
+    border-radius: $radius-sm;
+    transition:
+      color $transition,
+      background-color $transition,
+      border-color $transition;
+
+    &:hover {
+      color: var(--color-text);
+      border-color: var(--color-accent);
+    }
+
+    &.is-active,
+    &[aria-selected='true'] {
+      color: var(--color-on-accent);
+      background-color: var(--color-accent);
+      border-color: var(--color-accent);
+    }
+
+    @include respond(sm) {
+      flex: 0 0 auto;
+    }
+  }
+
+  &__panel {
+    padding: $space-lg;
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: $radius-md;
+    animation: tab-fade 0.3s ease;
+
+    p {
+      color: var(--color-text-muted);
+    }
+  }
+}
+
+@keyframes tab-fade {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

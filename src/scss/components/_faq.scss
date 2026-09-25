@@ -1,0 +1,76 @@
+@use '../abstracts' as *;
+
+.faq {
+  display: grid;
+  gap: $space-sm;
+
+  &__item {
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: $radius-md;
+    transition: border-color $transition;
+
+    h3 {
+      margin: 0;
+      font-family: $font-body;
+      font-size: 1.05rem;
+      font-weight: 600;
+      letter-spacing: 0;
+      text-transform: none;
+    }
+
+    &:hover,
+    &.is-open {
+      border-color: var(--color-accent);
+    }
+  }
+
+  &__question {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: $space-md;
+    width: 100%;
+    padding: $space-md $space-lg;
+    text-align: left;
+    font-weight: inherit;
+    background: transparent;
+    border: 0;
+    border-radius: $radius-md;
+    transition: color $transition;
+
+    // Plus / mínus ikona
+    &::after {
+      content: '+';
+      flex-shrink: 0;
+      font-size: 1.5rem;
+      line-height: 1;
+      color: var(--color-accent);
+      transition: transform $transition;
+    }
+
+    &:hover {
+      color: var(--color-accent);
+    }
+
+    &[aria-expanded='true']::after {
+      transform: rotate(45deg);
+    }
+  }
+
+  &__answer {
+    padding: 0 $space-lg $space-md;
+    color: var(--color-text-muted);
+    animation: faq-open 0.25s ease;
+  }
+}
+
+@keyframes faq-open {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}

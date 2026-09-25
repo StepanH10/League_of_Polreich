@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <!-- Kuchařská čepice -->
+  <path d="M18 36c-7 0-12-5-12-11s5-11 12-11c1-6 7-10 14-10s13 4 14 10c7 0 12 5 12 11s-5 11-12 11z" fill="#ffffff" stroke="#1f1f1f" stroke-width="3" stroke-linejoin="round"/>
+  <rect x="17" y="34" width="30" height="20" rx="3" fill="#ffffff" stroke="#1f1f1f" stroke-width="3"/>
+  <path d="M26 40v10M32 40v10M38 40v10" stroke="#d62828" stroke-width="3" stroke-linecap="round"/>
+  <rect x="15" y="52" width="34" height="6" rx="3" fill="#d62828" stroke="#1f1f1f" stroke-width="3"/>
+</svg>

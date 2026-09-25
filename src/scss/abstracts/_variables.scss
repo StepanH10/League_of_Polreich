@@ -1,0 +1,51 @@
+// Breakpointy (mobile-first, min-width)
+$bp-sm: 600px;
+$bp-md: 900px;
+
+$breakpoints: (
+  sm: $bp-sm,
+  md: $bp-md,
+);
+
+// Barvy – z mapy se v base/_root.scss generují CSS custom properties (--color-*)
+$colors: (
+  bg: #121212, // kuchyňská černá
+  surface: #1d1f22, // antracit
+  surface-2: #272a2e,
+  border: #3a3e44,
+  steel: #9aa3ad, // ocelově šedá
+  text: #f6efe3, // krémově bílá
+  text-muted: #cfc6b8,
+  accent: #ff5a1f, // plameny
+  accent-hover: #ff7a45,
+  accent-dark: #d63a0b,
+  on-accent: #121212, // text na akcentu (kontrast > 6:1)
+  success: #5cc98a,
+  error: #ff7070,
+);
+
+// Spacing
+$space-xs: 0.25rem;
+$space-sm: 0.5rem;
+$space-md: 1rem;
+$space-lg: 1.5rem;
+$space-xl: 2.5rem;
+$space-2xl: 4rem;
+
+// Rozměry
+$container-max: 1140px;
+$container-gutter: 1rem;
+$header-height: 4.5rem;
+
+// Zaoblení
+$radius-sm: 6px;
+$radius-md: 12px;
+$radius-lg: 20px;
+$radius-pill: 999px;
+
+// Fonty
+$font-heading: 'Oswald', 'Arial Narrow', sans-serif;
+$font-body: 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
+
+// Animace
+$transition: 0.2s ease;
